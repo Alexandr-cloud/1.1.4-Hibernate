@@ -97,7 +97,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void cleanUsersTable() {
-        String sql = "DROP TABLE IF EXISTS users";
+        String sql = "TRUNCATE TABLE users";
 
         try (Connection connection = Util.getConnection();
              Statement statement = connection.createStatement()) {
